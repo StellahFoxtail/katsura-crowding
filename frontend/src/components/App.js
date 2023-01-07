@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import React, { useEffect, useState } from "react";
 
 import Layout from "./Layout"
@@ -12,12 +13,12 @@ const App = () => {
           <DisplayChart/>
           <div className="flex">
             <button className="bg-primary hover:bg-gray-600 text-white text-sm sm:text-md font-medium py-2 px-4 rounded-lg">
-              <a to="https://docs.google.com/forms/d/e/1FAIpQLScU2ZbhWCi0iWpxQf8SrkZn0OopxQ14FeHZs0MaDCwGQ1qmrg/viewform?usp=sf_link">Online survey →</a>
+              <Link to="https://docs.google.com/forms/d/e/1FAIpQLScU2ZbhWCi0iWpxQf8SrkZn0OopxQ14FeHZs0MaDCwGQ1qmrg/viewform?usp=sf_link">Online survey →</Link>
             </button>
           </div>
           <div className="flex">
             <button className="bg-primary hover:bg-gray-600 text-white text-sm sm:text-md font-medium py-2 px-4 rounded-lg">
-              <a to="https://west2-univ.jp/sp/index.php?t=650120">Today's menu →</a>
+              <Link to="https://west2-univ.jp/sp/index.php?t=650120">Today's menu →</Link>
             </button>
           </div>
         </div>
