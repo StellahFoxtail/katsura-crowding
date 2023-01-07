@@ -24,10 +24,11 @@ const PopularityChart = ({ location }) => {
                                         "time_to_display": null,
                                       });
   
+  const apiURL = "https://katsuracrowding.pythonanywhere.com";
 
   useEffect(() => {
     console.log("Fetching data...")
-    fetch(`http://127.0.0.1:5000/day_average/${location}`)
+    fetch(`${apiURL}/day_average/${location}`)
      .then(res => res.json())
      .then(json => setData(json))
      .catch(error => console.error(error))
@@ -35,13 +36,13 @@ const PopularityChart = ({ location }) => {
   
   useEffect(() => {
     console.log("Counting users...");
-    fetch(`http://127.0.0.1:5000/service-level-api/${location}`)
+    fetch(`${apiURL}/service-level-api/${location}`)
     .then(res => res.json())
     .then(json => setPopularity(json))
   }, [location])
 
 
-  console.log(`http://127.0.0.1:5000/day_average/${location}`)
+  console.log(`${apiURL}/day_average/${location}`)
   console.log("hdata: ", hdata)
   console.log("Popularity: ", popularity)
 
@@ -142,7 +143,7 @@ const PopularityChart = ({ location }) => {
 
     var service_status;
     if ((popularity.count != null) && (i != -1)) {
-      service_status = <ServiceStatus count={liveData[i]} average_count={data[i]}/>
+      service_status = <ServiceStatus count={liveData[i]} average_count={data[i]} apiURL={apiURL}/>
     } else {
       service_status = ""
     }
