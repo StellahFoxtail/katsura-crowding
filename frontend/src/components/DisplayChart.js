@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Notice from '../components/Notice';
+import Notice from './Notice';
 import PopularityChart from "./PopularityChart"
 
 function MyDropdown() {

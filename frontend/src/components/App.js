@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import Layout from "./Layout"
+import Layout from "./layout"
 import DisplayChart from "./DisplayChart"
 
 const App = () => {
