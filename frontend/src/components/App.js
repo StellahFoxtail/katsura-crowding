@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import Layout from "./Layout"
+import Layout from "./layout"
 import DisplayChart from "./DisplayChart"
 
 const App = () => {
