@@ -174,7 +174,7 @@ def service_level(sensor, live_data=LIVE_DATA, time=TIME):
 
     return response
 
-sched.start()
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    sched.start()
+    app.run()
