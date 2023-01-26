@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function ServiceStatus({count, average_count, apiURL}) {
+function ServiceStatus({count, average_count, apiURL, location}) {
 	const [status, setStatus] = useState();
 
 	useEffect(() => {
@@ -8,7 +8,7 @@ function ServiceStatus({count, average_count, apiURL}) {
 		.then((res) => res.json()
 		.then((json) => setStatus(json))
 		);
-	}, [count]);
+	}, [location]);
 
 	console.log(`${apiURL}/service_status?count=${count}&average_count=${average_count}`)
   console.log("Service status: ", status)
