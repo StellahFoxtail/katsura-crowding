@@ -45,4 +45,4 @@ const Notice = ({ location }) => {
   } 
  };
  
- export default Notice;
+export default Notice;
