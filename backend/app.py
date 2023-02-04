@@ -111,7 +111,7 @@ def get_aggregated_data(live_data, aggregate=60, time=TIME):
     print("Time: ", time)
 
     df = pd.DataFrame({})
-    for i in range(3):
+    for i in range(12):
         print("Fetching data...")
         df_temp = get_live_data(time)
         df = pd.concat([df_temp, df])
