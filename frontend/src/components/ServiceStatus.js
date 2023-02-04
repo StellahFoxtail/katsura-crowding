@@ -5,8 +5,7 @@ function ServiceStatus({count, average_count, apiURL, location}) {
 	const [status, setStatus] = useState();
 
   var message;
-
-	percent_diff = (count - average_count)/average_count
+  var percent_diff = (count - average_count)/average_count
 
   if (Math.abs(percent_diff) <= 0.05){
     message = "As busy as usual."
