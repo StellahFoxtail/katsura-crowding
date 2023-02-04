@@ -72,26 +72,6 @@ def get_day_average(sensor):
     return {"message":message, "data":data, "sensor": sensor}
 
 
-@app.route("/service_status")
-def service_status():
-    count = int(request.args.get("count"))
-    average_count = int(request.args.get("average_count"))
-
-    print("Count: ", count)
-
-    percent_diff = (count - average_count)/average_count
-
-    if percent_diff == 0 or abs(percent_diff) <= 0.05:
-      return '1'
-    elif percent_diff > 0.05 and percent_diff <= 0.25:
-      return '2'
-    elif percent_diff > 0.25:
-      return '3'
-    elif percent_diff < -0.05 and percent_diff >= -0.25:
-      return '4'
-    elif percent_diff < -0.25:
-      return '5'
-
 
 def get_live_data(time):
     timeCode = time.strftime("%H") + time.strftime("%M")
