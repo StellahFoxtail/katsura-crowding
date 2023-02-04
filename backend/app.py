@@ -42,7 +42,7 @@ for file in files:
 
 # Keep a dictionary of the days of the week to be used in getting the 
 # corresponding averages
-week_days = {0:"Monday", 1:"Tuesday", 2:"Wednesday", 3:"Thursday", 4:"Friday"}
+week_days = {0:"Monday", 1:"Tuesday", 2:"Wednesday", 3:"Thursday", 4:"Friday", 5:"Saturday", 6:"Sunday"}
 
 # This variable will store the preloaded live data
 LIVE_DATA = [pd.DataFrame({})]
