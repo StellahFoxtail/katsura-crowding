@@ -1,39 +1,32 @@
 import React, { useState, useEffect } from "react";
 
+
 function ServiceStatus({count, average_count, apiURL, location}) {
 	const [status, setStatus] = useState();
 
-	useEffect(() => {
-		fetch(`${apiURL}/service_status?count=${count}&average_count=${average_count}`)
-		.then((res) => res.json()
-		.then((json) => setStatus(json))
-		);
-	}, [location]);
+  var message;
 
-	console.log(`${apiURL}/service_status?count=${count}&average_count=${average_count}`)
-  console.log("Service status: ", status)
+	percent_diff = (count - average_count)/average_count
 
-  if (status == 5) {
-    return (
-			"Much less busier than usual."
-    )
-  } else if (status == 4) {
-    return (
-			"Less busier than usual."
-    )
-  } else if (status == 3) {
-    return (
-			"Much busier than usual."
-    )
-  } else if (status == 2) {
-    return (
-			"Busier than usual."
-    )
-  } else if (status == 1) {
-    return (
-			"As busy as usual."
-    )
-  } 
- }; 
+  if (Math.abs(percent_diff) <= 0.05){
+    message = "As busy as usual."
+  }
+  else if (percent_diff > 0.05 && percent_diff <= 0.15) {
+    message = "Busier than usual."
+  }
+  else if (percent_diff > 0.15) {
+    message = "Much busier than usual."
+  }
+  else if (percent_diff < -0.05 && percent_diff >= -0.15){
+    message = "Less busier than usual."
+  }
+  else if (percent_diff < -0.15) {
+    message = "Much less busier than usual."
+  } else {
+    message = " "
+  }
+
+  return message
+}; 
  
- export default ServiceStatus;
+export default ServiceStatus;
