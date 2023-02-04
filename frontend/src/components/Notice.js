@@ -43,6 +43,6 @@ const Notice = ({ location }) => {
       <div></div>
     )
   } 
- };
+};
  
 export default Notice;
