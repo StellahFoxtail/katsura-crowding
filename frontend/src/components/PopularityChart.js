@@ -142,7 +142,7 @@ const PopularityChart = ({ location }) => {
     }
 
     var service_status;
-    if ((popularity.count != null) && (i != -1)) {
+    if ((popularity.count == null) || (i == -1)) {
       service_status = " "
     } else {
       service_status = <ServiceStatus count={liveData[i]} average_count={data[i]} apiURL={apiURL} location={location}/>
