@@ -25,6 +25,7 @@ const Notice = ({ location }) => {
     message = "A4 Rear Entrance is a 24HourOpen short route Access from Katsura Innovation Park Mae Bus Stop at A Cluster"
   } else if (location == "AMPM18-KJ015") {
     message = "Boulangerie Seri Bakery is open from 8:00AM to 3:00PM from Monday to Saturday"
+  }
 
   console.log("Message: ", message)
   if (message != null) {
@@ -43,6 +44,6 @@ const Notice = ({ location }) => {
       <div></div>
     )
   } 
-}
+};
  
 export default Notice;
