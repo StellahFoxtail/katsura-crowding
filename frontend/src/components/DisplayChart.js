@@ -12,16 +12,16 @@ function MyDropdown() {
   return (
     <div>
       <select value={selectedOption} onChange={handleChange}>
-        <option value="AMPM18-KJ008">C Cluster Admnistration Office</option>
-        <option value="AMPM18-KJ009">C1 Bldng Entrance</option>
-        <option value="AMPM18-KJ011">B Cluster Administration Office</option>
-        <option value="AMPM18-KJ012">Katsura Main Student Library</option>
-        <option value="AMPM18-KJ013">A4 Rear Entrance</option>
-        <option value="AMPM18-KJ014">P3P Parking Mae</option>
-        <option value="AMPM18-KJ015">Boulangerie Seri Bakery</option>
-        <option value="AMPM18-KJ010">Inside Main Cafeteria</option>
-        <option value="AMPM18-KJ016">Main Cafeteria Entrance</option>
-        <option value="AMPM18-KJ017">Main Cafeteria Exit</option>
+        <option value="AMPM18-KJ008">Cクラスター管理室</option>
+        <option value="AMPM18-KJ009">C1ビル入口</option>
+        <option value="AMPM18-KJ011">B クラスター管理室</option>
+        <option value="AMPM18-KJ012">桂学生図書館</option>
+        <option value="AMPM18-KJ013">A4ビル裏口</option>
+        <option value="AMPM18-KJ014">P3Pパーキング前</option>
+        <option value="AMPM18-KJ015">ブーランジェリー セリ ベーカリー</option>
+        <option value="AMPM18-KJ010">メインカフェテリア内</option>
+        <option value="AMPM18-KJ016">カフェテリアメインエントランス</option>
+        <option value="AMPM18-KJ017">メインカフェテリア出口</option>
       </select>
       <Notice location={selectedOption}/>
       <PopularityChart location={selectedOption}/>
