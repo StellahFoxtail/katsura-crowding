@@ -10,21 +10,21 @@ const Notice = ({ location }) => {
   var message = null;
 
   if (notice_sensors.includes(location)){
-    message = "Cafeteria Selene is open for lunch from 11:00AM to 2:00PM"
+    message = "カフェテリアセレーネはランチタイムに11:00から14:00まで営業しています。"
   } else if (location == "AMPM18-KJ008") {
-    message = "C CLUSTER Admnistration Office is open from 9:00AM TO 5:00PM"
+    message = "Cクラスターアドニストレーションオフィスの営業時間は9:00〜17:00です。"
   } else if (location == "AMPM18-KJ009") {
-    message = "C1 Bldng. Entrance is open from 6:00AM and can be acessed with the University Student card after 6:00PM"
+    message = "C1棟入場は6:00AMからオープンし、18:00以降は大学生カードでアクセスできます。"
   } else if (location == "AMPM18-KJ011") {
-    message = "B Cluster Admnistration Office is Open from 9:00AM to 5:00PM"
+    message = "Bクラスター管理室の営業時間は9:00〜17:00です。"
   } else if (location == "AMPM18-KJ012") {
-    message = "Katsura Mani Student Library is open from 9:00AM to 9:00PM"
+    message = "桂本館は9:00から21:00まで開館しています。"
   } else if (location == "AMPM18-KJ013") {
-    message = "P3P Parking at A Cluster Between Buildings A3 and A4 is open 24 Hours"
+    message = "A3棟とA4棟の間のクラスターのP3P駐車場は24時間営業です。"
   } else if (location == "AMPM18-KJ014") {
-    message = "A4 Rear Entrance is a 24HourOpen short route Access from Katsura Innovation Park Mae Bus Stop at A Cluster"
+    message = "A4リアエントランスは24時間オープンの近距離ルート 桂イノベーションパーク前バス停からのアクセス"
   } else if (location == "AMPM18-KJ015") {
-    message = "Boulangerie Seri Bakery is open from 8:00AM to 3:00PM from Monday to Saturday"
+    message = "ブーランジェリーセリベーカリーは、月曜日から土曜日の午前8:00から午後3:00まで営業しています。"
   }
 
   console.log("Message: ", message)
