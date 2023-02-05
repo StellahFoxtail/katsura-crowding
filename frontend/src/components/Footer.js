@@ -17,7 +17,7 @@ const Footer = () => {
           <p className="text-center">Katsura Campus Crowding Research by ITS Lab, Kyoto University. </p>
           <div className="flex gap-2">
             <p className="text-center">© {new Date().getFullYear()} ITS Lab.</p>
-            <Link to="/acknowledgements" className="text-center">Acknowledgments.</Link>
+            <Link to="/acknowledgements" className="text-center">謝辞と説明.</Link>
           </div>
         </div>
         
