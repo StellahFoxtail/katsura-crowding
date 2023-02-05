@@ -8,19 +8,19 @@ function ServiceStatus({count, average_count, apiURL, location}) {
   var percent_diff = (count - average_count)/average_count
 
   if (Math.abs(percent_diff) <= 0.05){
-    message = "As busy as usual."
+    message = "いつものように忙しい。"
   }
-  else if (percent_diff > 0.05 && percent_diff <= 0.15) {
-    message = "Busier than usual."
+  else if (percent_diff > 0.05 && percent_diff <= 0.50) {
+    message = "いつもより忙しい。"
   }
-  else if (percent_diff > 0.15) {
-    message = "Much busier than usual."
+  else if (percent_diff > 0.50) {
+    message = "いつもよりずっと忙しい。"
   }
-  else if (percent_diff < -0.05 && percent_diff >= -0.15){
-    message = "Less busier than usual."
+  else if (percent_diff < -0.05 && percent_diff >= -0.50){
+    message = "いつもより忙しくない。"
   }
-  else if (percent_diff < -0.15) {
-    message = "Much less busier than usual."
+  else if (percent_diff < -0.50) {
+    message = "いつもよりずっと忙しくない。"
   } else {
     message = " "
   }
