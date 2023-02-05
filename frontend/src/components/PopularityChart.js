@@ -49,7 +49,7 @@ const PopularityChart = ({ location }) => {
   if (hdata.message == null) {
     displayBarChart = <div></div>
   } else if (hdata.message != 'SUCCESS') {
-    displayBarChart = <div>The Cafeteria is closed today!</div>
+    displayBarChart = <div>食堂は本日閉店です!</div>
   } else {
     const labels = hdata.data.map(function(label) {
       label = label.time;
