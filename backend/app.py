@@ -119,7 +119,7 @@ test_scheduler(LIVE_DATA)
 get_aggregated_data(LIVE_DATA)
 print(LIVE_DATA)
 sched.add_job(test_scheduler, 'interval', seconds=50, args=[LIVE_DATA])
-sched.add_job(get_aggregated_data,'interval', minutes=3, args=[LIVE_DATA])
+sched.add_job(get_aggregated_data,'interval', minutes=1, args=[LIVE_DATA])
 
 
 CAFE_SENSORS = ["AMPM18-KJ010", "AMPM18-KJ016", "AMPM18-KJ017"]
@@ -129,7 +129,7 @@ CAFE_SENSORS = ["AMPM18-KJ010", "AMPM18-KJ016", "AMPM18-KJ017"]
 def service_level(sensor, live_data=LIVE_DATA, time=TIME):
     time = TIME[0]
 
-    df = live_data[0]
+    df = live_data[0].copy()
 
     if sensor in CAFE_SENSORS:
         start = roundTime(time, roundTo=5)   
